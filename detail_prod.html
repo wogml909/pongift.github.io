@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/sojin.css">
+</head>
+<body>
+  <div class="mini_head">
+    <span class="left_area"></span>
+    상품상세
+    <span class="right_area"></span>
+  </div>
+  <div class="page_wrap dp_wrap">
+    <div class="dp_img_wrap">
+      <img src="img/dp_prod_img.png" alt="">
+    </div>
+    <div class="prod_info">
+      <p class="brand_name">스타벅스</p>
+      <h4>아메리카노 Tall Size</h4>
+      <div class="prod_price">
+        <p class="price_before"><span>4,400원</span></p>
+        <p class="price_after"><span class="percent">10%</span>4,000원</p>
+      </div>
+      <div class="prod_detail">
+        <p>상품상세<br>[필수] 유효기간 및 환불안내</p>
+      </div>
+      <div class="buy_btn">
+        <button type="button" class="bg_purple_btn btn" id="prod_gift">선물하기</button>
+        <button type="button" class="bg_gray_btn btn">구매하기</button>
+      </div>
+    </div>
+  </div>
+  <div class="option_bg"></div>
+  <div class="prod_option">
+    <h4>선물옵션 <span class="closed"></span></h4>
+    <div class="pdo_info">
+      <ul>
+        <li>
+          <div class="img_area">
+            <img src="img/prod_option.png">
+          </div>
+        </li>
+        <li class="info_area">
+          <p class="pdo_brand">스타벅스(브랜드명)</p>
+          <h5>아메리카노 Tall Size</h5>
+          <p class="pdo_period">2023.01.09 (유효기간)</p>
+        </li>
+      </ul>
+    </div>
+    <table>
+      <colgroup>
+        <col width="70%">
+        <col width="30%">
+      </colgroup>
+      <tr>
+        <th>주문 수량(최대 10개)</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>총 주문 금액</th>
+        <td class="pdo_all_price">4,000원</td>
+      </tr>
+      <tr>
+        <th>받는사람</th>
+        <td class="addr_book">주소록</td>
+      </tr>
+      <tr>
+        <th>휴대폰 번호</th>
+        <td class="plus_img">추가</td>
+      </tr>
+      <tr>
+        <th>010-1234-1234</th>
+        <td class="minus_img"></td>
+      </tr>
+      <tr>
+        <th>010-1234-1234</th>
+        <td class="minus_img"></td>
+      </tr>
+    </table>
+    <a href="order_detail.html" class="bg_purple_btn btn go_gift">선물하기</a>
+  </div>
+
+  <script>
+    $('#prod_gift').on('click',function(){
+      $('.option_bg').addClass('active');
+      $('.prod_option').addClass('active');
+    });
+    $('.prod_option h4 .closed').on('click',function(){
+      $('.option_bg').removeClass('active');
+      $('.prod_option').removeClass('active');
+    });
+  </script>
+</body>
+</html>

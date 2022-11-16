@@ -1,0 +1,167 @@
+<html>
+    <html lang="ko" id="html_wrap">
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- <script src="./js/main.js" type="module"></script> -->
+      <body>
+        <!-- header default--> 
+         <div data-include-path="header.html"></div>
+            <script>
+               window.addEventListener('load', function() {
+                  var allElements = document.getElementsByTagName('*');
+                  Array.prototype.forEach.call(allElements, function(el) {
+                        var includePath = el.dataset.includePath;
+                        if (includePath) {
+                           var xhttp = new XMLHttpRequest();
+                           xhttp.onreadystatechange = function () {
+                              if (this.readyState == 4 && this.status == 200) {
+                                    el.outerHTML = this.responseText;
+                              }
+                           };
+                           xhttp.open('GET', includePath, true);
+                           xhttp.send();
+                        }
+                  });
+               });
+            </script>
+        <!-- header default-->     
+
+       <!-- header 시작-->     
+          <section id="header">
+               <header>
+                  <div class="container">
+                     <ul class="Guest_bar">
+                        <li>김OO님</li>
+                        <li class="group32 fa-stack fa-lg">
+                           <i class="fa-solid fa-magnifying-glass fa-fw" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                           <i class="fa-regular fa-bell fa-fw" aria-hidden="true"></i>
+                        </li>
+                     </ul>
+                  </div>
+                     <!-- nav 시작-->
+                     <div class="nav">
+                        <div class="container">
+                           <ul class="nav_bar">
+                              <li class="dot"><span id="foo"></span></li>
+                              <li>홈</li>
+                              <li>스토어</li>
+                           </ul>
+                        </div>
+                     </div>
+                        <script>
+                              var f = document.getElementById('foo');
+                              document.addEventListener('click' , function(ev){
+                              f.style.left = (ev.clientX-25)+'px';
+                              f.style.right = (ev.clientX-25)+'px';
+                              },false);
+                        </script>
+                  <!-- nav end-->
+              </header>
+              <!-- header end-->
+
+            <!-- slider stert -->
+            <!-- Swiper -->
+            <div class="container">
+            <div id="main_swiper">
+               <div class="main swiper mySwiper">
+                  <div class="main swiper-wrapper">
+                  <div class="main swiper-slide"><img src="img/main_slide01.png"></div>
+                  <!-- <div class="main swiper-slide"><img src="img/main_slide02.png"></div>
+                  <div class="main swiper-slide"><img src="img/main_slide03.png"></div> -->
+                  </div>
+                  <!-- <div class="main swiper-button-next"></div>
+                  <div class="main swiper-button-prev"></div> -->
+                  <div class="main swiper-pagination"></div>
+               </div>
+            </div>
+               <!-- Swiper JS -->
+               <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+               <!-- Initialize Swiper -->
+               <script>
+                  var swiper = new Swiper(".mySwiper", {
+                  spaceBetween: 70,
+                  slidesPerView:'auto',
+                  centeredSlides: true,
+                  // autoplay: {
+                  //    delay: 2500,
+                  //    disableOnInteraction: false,
+                  // },
+                  loop:true,//슬라이드반복여부
+                  loopAdditionalSlides:1,
+                  pagination: {
+                     el: ".swiper-pagination",
+                     type: "fraction",
+                  },
+                  navigation: {
+                     nextEl: ".swiper-button-next",
+                     prevEl: ".swiper-button-prev",
+                  },
+                  });
+                   </script>
+            </div>
+         </section>
+            <!-- slider end -->
+
+          <!-- contants start -->
+     
+          <div class="page_wrap ">
+            <div class="od_wrap">
+              <h5>주문상품정보</h5>
+              <div class="od_cont">
+                <div class="pdo_info">
+                  <ul>
+                    <li>
+                      <div class="img_area">
+                        <img src="img/prod_option.png">
+                      </div>
+                    </li>
+                    <li class="info_area">
+                      <p class="pdo_brand">스타벅스(브랜드명)</p>
+                      <h5>아메리카노 Tall Size</h5>
+                      <p class="pdo_period">2023.01.09 (유효기간)</p>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+          <!-- contants end -->
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- footer start-->
+             <div data-include-path="footer.html"></div>
+               <script>
+                   window.addEventListener('load', function() {
+                       var allElements = document.getElementsByTagName('*');
+                       Array.prototype.forEach.call(allElements, function(el) {
+                           var includePath = el.dataset.includePath;
+                           if (includePath) {
+                               var xhttp = new XMLHttpRequest();
+                               xhttp.onreadystatechange = function () {
+                                   if (this.readyState == 4 && this.status == 200) {
+                                       el.outerHTML = this.responseText;
+                                   }
+                               };
+                               xhttp.open('GET', includePath, true);
+                               xhttp.send();
+                           }
+                       });
+                   });
+               </script>
+             <!-- footer end-->
+
+            </body>
+           </html>
+          
