@@ -1,0 +1,205 @@
+.mini_head{
+  width: 100%;
+  text-align: center;
+  font-size: 1.71em;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  position: fixed;
+  background-color: #fff;
+  z-index: 1;
+}
+.mini_head span{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.mini_head span{
+  width: 20px;
+  height: 20px;
+}
+.mini_head .left_area{
+  left: 30px;
+  background: url(../img/head_left_arrow.png) no-repeat center;
+}
+.mini_head .right_area{
+  right: 30px;
+  background: url(../img/head_closed.png) no-repeat center;
+}
+.page_wrap{
+  padding: 60px 28px 140px;
+}
+.page_wrap.dp_wrap{
+  background-color: #fff;
+}
+.dp_img_wrap{
+  text-align: center;
+}
+.dp_img_wrap img{
+  border-radius: 30px;
+}
+.prod_info{
+  margin-top: 26px;
+  position: relative;
+}
+.prod_info .brand_name{
+  font-weight: 100;
+  font-size: 1.43em;
+  color: #605e5c;
+}
+.prod_info h4{
+  font-size: 1.71em;
+  color: var(--black);
+}
+.prod_price{
+  margin-top: 20px;
+}
+.prod_price .price_before span{
+  color: #A19F9D;
+  position: relative;
+}
+.prod_price .price_before span::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: #A19F9D;
+}
+.prod_price .price_after{
+  font-size: 1.71em;
+  color: #323130;
+}
+.prod_price .price_after span{
+  font-size: 0.84em;
+  color: #3D3D3D;
+  font-weight: 300;
+  margin-right: 10px;
+}
+.prod_detail{
+  margin: 20px 0 15%;
+  background-color: #D9D9D9;
+  width: 100%;
+  height: 168px; /*임시로 작성*/
+  position: relative;
+  border-radius: 30px;
+}
+/*임시*/
+.prod_detail p{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*임시*/
+.buy_btn{
+  text-align: center;
+}
+.buy_btn button{
+  border-radius: 30px;
+  width: 47%;
+}
+.buy_btn .bg_gray_btn{margin-left: 3%;}
+
+
+
+.option_bg{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  z-index: 2;
+  display: none;
+}
+.prod_option{
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  padding: 18px 28px;
+  background-color: #fff;
+  border-radius: 30px 30px 0px 0px;
+  z-index: 3;
+  display: none;
+}
+.option_bg.active, .prod_option.active{display: block;}
+.prod_option h4{
+  font-size: 1.71em;
+  text-align: center;
+  position: relative;
+}
+.prod_option h4 span{
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  top: 50%;
+  right: 0;
+  background: url(../img/head_closed.png) no-repeat center;
+  transform: translateY(-50%);
+}
+.pdo_info ul{
+  display: table;
+  width: 100%;
+  padding: 0;
+}
+.pdo_info ul li{
+  display: table-cell;
+}
+.pdo_info ul li:first-child{
+  width: 100px;
+}
+.pdo_info ul li:last-child{
+  padding-left: 15px;
+  vertical-align: middle;
+}
+.pdo_info .info_area .pdo_brand{
+  font-size: 0.86em;
+}
+.pdo_info .info_area h5{
+  font-size: 1.43em;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.pdo_info .info_area .pdo_period{
+  font-size: 1.14em;
+  margin-top: 15px;
+}
+
+.prod_option table tr > *{
+  padding: 15px 0;
+}
+.prod_option table th{
+  text-align: left;
+  font-weight: 500;
+}
+.prod_option table td{
+  font-size: 0.86em;
+  text-align: right;
+}
+.prod_option table .pdo_all_price{
+  font-weight: bold;
+  font-size: 1.38em;
+}
+.prod_option table .addr_book{
+  padding-right: 20px;
+  background: url(../img/b_right_arrow.png) no-repeat right;
+
+}
+.prod_option table .plus_img{
+  padding-right: 20px;
+  background: url(../img/prod_plus.png) no-repeat right;
+}
+.prod_option table .minus_img{
+  background: url(../img/prod_minus.png) no-repeat right;
+}
+.prod_option .go_gift{
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 30px;
+  padding: 17px 0;
+  margin-top: 38px;
+}
